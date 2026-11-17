@@ -1,0 +1,16 @@
+{
+  "name": "webhook-replay-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Capture redacted JSON test webhooks and replay them to explicit loopback endpoints.",
+  "bin": { "webhook-replay": "dist/cli.js" },
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "demo": "npm run build && node scripts/demo.mjs",
+    "start": "node dist/cli.js"
+  },
+  "devDependencies": { "@types/node": "^22.0.0", "typescript": "5.9.3" }
+}
